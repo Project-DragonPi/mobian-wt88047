@@ -1,5 +1,7 @@
 ## debian 11 + linux 5.14-rc4 redmi2 刷机包
 
+### 包在release里面
+
 By HandsomeHacker <handsomeyingyan@gmail.com>
 
 仅适用于高通msm8916方案的红米2手机（代号wt88047 & wt86047）
