@@ -14,7 +14,7 @@ By HandsomeHacker <handsomeyingyan@gmail.com>
 
 1. 进入手机原厂的fastboot模式(音量下+电源键)，然后刷入lk2nd
 ``` shell
-   fastboot flash boot lk2nd.img
+   fastboot flash:raw boot lk2nd.img
    fastboot reboot
 ```
 2. 在lk2nd界面中刷入debian的内核和文件系统
@@ -34,6 +34,25 @@ By HandsomeHacker <handsomeyingyan@gmail.com>
    postmarketos 项目 https://postmarketos.org/
 
    mobian 项目 https://mobian-project.org/
+   
+## 注意事项
+   如果你的手机在插卡之后检测到卡但是没有信号，则你的手机型号是wt86047。
+   
+   使用和wt88047不一样的modem固件。
+   
+   可以通过adb来切换modem固件解决。
+``` shell 
+   adb shell
+   cp lib/firmware-wt86047/* lib/firmware/
+```
+
+## 更新日志
+
+- 2021/8/28
+
+   * 加入支持anbox和lxc的相关内核选项
+   * 加入adb支持
+   * 支持modem，流量和通话正常
 
 ## DEMO
 
